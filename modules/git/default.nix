@@ -16,7 +16,7 @@ in {
       userEmail = "claytonfernalo@gmail.com";
       extraConfig = {
         init = { defaultBranch = "main"; };
-        credential.credentialStore = gpg;
+        credential.credentialStore = "gpg";
       };
     };
   };

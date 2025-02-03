@@ -6,8 +6,9 @@
     # gui
     firefox.enable = true;
     vscode.enable = true;
+    hypridle.enable = true;  
     hyprland.enable = true;
-    hyprlock.enable = true;    
+    hyprlock.enable = true; 
     waybar.enable = true;
     ghostty.enable = true;
  

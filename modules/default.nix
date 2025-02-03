@@ -5,6 +5,7 @@
   imports = [
     ./firefox
     ./vscode
+    ./hypridle
     ./hyprland
     ./hyprlock
     ./waybar
