@@ -12,7 +12,7 @@ in {
 
     programs.ghostty.enable = true;
 
-    home.".config/ghostty/config" = ./config
+    home.".config/ghostty/config" = ./config;
 
   };
 }
