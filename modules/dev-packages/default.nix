@@ -11,7 +11,7 @@ in {
       rustc cargo
 
       # OCaml
-      ocaml
+      ocaml opam
     
       # Go
       go
