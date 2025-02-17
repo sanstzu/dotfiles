@@ -15,5 +15,6 @@
     ./zsh
 
     ./packages
+    ./dev-packages
   ];
 }

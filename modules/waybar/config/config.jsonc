@@ -32,7 +32,8 @@
       "on-click": "waybar-mpris --send toggle",
       "on-click-right": "waybar-mpris --send player-next",
       "exec": "waybar-mpris --position --order \"SYMBOL:ARTIST:TITLE:POSITION\" --pause \"\" --play \"\" | $HOME/.config/waybar/compress.sh",
-      "max-length": 50
+      "max-length": 50, 
+      "hide-empty-text": true
   },
   "power-profiles-daemon": {
     "format": "{icon}",

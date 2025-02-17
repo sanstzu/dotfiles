@@ -18,6 +18,7 @@
 
     # packages
     packages.enable = true;
+    dev-packages.enable = true;
   };
 
 }

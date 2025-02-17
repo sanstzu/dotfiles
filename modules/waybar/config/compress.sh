@@ -4,6 +4,12 @@ max=50
 while IFS= read -r line; do
   # Extract the "text" field from the JSON input.
   text=$(echo "$line" | jq -r '.text')
+
+  # If text is null or empty, set newtext to an empty string.
+  if [ "$text" = "null" ] || [ -z "$text" ]; then
+    echo "$line" | jq -c '.text=""'
+    continue
+  fi
   
   # If text length is within limit, keep it unchanged.
   if [ ${#text} -le "$max" ]; then
