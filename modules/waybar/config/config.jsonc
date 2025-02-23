@@ -19,7 +19,7 @@
     "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
     "format-disconnected": "󰤮",
     "max-length": 30,
-    "on-click": "ghostty -e nmtui-connect"
+    "on-click": "nm-applet"
   },
   "tray": {
       "icon-size": 21,
