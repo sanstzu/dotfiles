@@ -7,12 +7,15 @@ in {
   options.modules.packages = { enable = mkEnableOption "packages"; };
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
+      # d2d applications
       discord telegram-desktop
       spotify pgadmin4 steam
 
+      # File managers
       nemo nemo-fileroller unzip zip
 
-      wireshark
+      # Networking stuff
+      wireshark busybox
     ];
   };
 
