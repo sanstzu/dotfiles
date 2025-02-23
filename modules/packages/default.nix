@@ -9,6 +9,9 @@ in {
     home.packages = with pkgs; [
       discord telegram-desktop
       spotify pgadmin4 steam
+      xfce.thunar
+
+      wireshark
     ];
   };
 

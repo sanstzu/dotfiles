@@ -38,6 +38,7 @@
   # Enable hyperland module
   programs.hyprland.enable = true;
   programs.hyprland.withUWSM  = true;
+  programs.wireshark.enable = true;
 
   # Enable zsh
   programs.zsh.enable = true;
@@ -140,7 +141,7 @@
   users.users.clayt = {
     isNormalUser = true;
     description = "Clayton Fernalo";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "wireshark" ];
     shell = pkgs.zsh;
   };
 
