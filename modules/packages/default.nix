@@ -10,7 +10,7 @@ in {
       discord telegram-desktop
       spotify pgadmin4 steam
 
-      nemo nemo-fileroller
+      nemo nemo-fileroller unzip zip
 
       wireshark
     ];
