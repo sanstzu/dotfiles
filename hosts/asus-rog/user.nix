@@ -10,6 +10,7 @@
     hyprland.enable = true;
     hyprlock.enable = true; 
     waybar.enable = true;
+    wofi.enable = true;
     ghostty.enable = true;
  
     # cli
