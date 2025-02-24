@@ -16,13 +16,14 @@
    },
   "cpu": {
     "interval": 3,
-    "format": " {}%",
+    "format": " {usage}%",
     "max-length": 10
   },
   "temperature": {
 	// "thermal-zone": 2,
 	// "hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
-	"critical-threshold": 80,
+	"interval": 3,
+    "critical-threshold": 85,
 	"format": "({temperatureC}°C)"
   },
   "memory": {

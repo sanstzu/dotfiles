@@ -56,7 +56,8 @@
 
 #temperature {
   background-color: @surface0;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0rem;
+  margin: 5px 0;
   color: @maroon;
 }
 
