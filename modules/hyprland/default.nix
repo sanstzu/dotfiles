@@ -9,7 +9,7 @@ in {
   config = mkIf cfg.enable {
 
     home.packages = with pkgs; [
-      gtk3 hyprland swaybg networkmanagerapplet
+      gtk3 hyprland swaybg networkmanagerapplet wofi
     ];
 
     # home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
