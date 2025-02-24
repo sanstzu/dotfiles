@@ -9,7 +9,7 @@ in {
     home.packages = with pkgs; [
       # d2d applications
       discord telegram-desktop
-      spotify pgadmin4 steam
+      spotify pgadmin4 steam ncspot
 
       # File managers
       nemo nemo-fileroller unzip zip
