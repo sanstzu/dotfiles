@@ -46,12 +46,23 @@
 #pulseaudio,
 #custom-lock,
 #custom-power,
+#cpu,
+#memory,
 #power-profiles-daemon {
   background-color: @surface0;
   padding: 0.5rem 1rem;
   margin: 5px 0;
 }
 
+#temperature {
+  background-color: @surface0;
+  padding: 0.5rem 1rem;
+  color: @maroon;
+}
+
+#temperature.critical {
+  color: #f53d70;
+}
 
 
 #battery {
@@ -71,7 +82,7 @@
 }
 
 #power-profiles-daemon {
-  color: @flamingo
+  color: @flamingo;
 }
 
 /* Middle */
@@ -79,12 +90,22 @@
     border-radius: 0;
 }
 
-#pulseaudio {
+#cpu {
   color: @maroon;
+  /* Add this to the first member of the group */
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#memory {
+  color: @rosewater;
+  /* Add this to the last member of the group */
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
 }
 
 
-#network {
+#pulseaudio {
   color: @peach;
   /* Add this to the first member of the group */
   border-radius: 1rem 0px 0px 1rem;

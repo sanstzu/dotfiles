@@ -16,10 +16,12 @@ in {
       settings = {
         theme = "catppuccin-mocha";
         window-decoration = "false";
+
       };
       themes = {
         catppuccin-mocha = {
           background = "1e1e2e";
+          background-opacity = 0.4;
           cursor-color = "f5e0dc";
           foreground = "cdd6f4";
           palette = [

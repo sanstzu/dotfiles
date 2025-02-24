@@ -16,6 +16,9 @@ in {
 
       # Networking stuff
       wireshark busybox
+
+      # Utilities
+      htop
     ];
   };
 

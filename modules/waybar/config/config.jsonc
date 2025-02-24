@@ -5,7 +5,7 @@
   // Choose the order of the modules
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["custom/music"],
-  "modules-right": ["network", "pulseaudio", "backlight", "backlight#2", "power-profiles-daemon", "battery", "clock", "tray", "custom/lock", "custom/power"],
+  "modules-right": ["cpu", "temperature", "memory", "pulseaudio", "backlight", "backlight#2", "power-profiles-daemon", "battery", "clock", "tray", "custom/lock", "custom/power"],
   "hyprland/workspaces": {
        "disable-scroll": true,
        "sort-by-name": true,
@@ -14,12 +14,20 @@
            "default": "",
        }
    },
-  "network": {
-    "format": "{icon} {essid}",
-    "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
-    "format-disconnected": "󰤮",
-    "max-length": 30,
-    "on-click": "nm-applet"
+  "cpu": {
+    "interval": 3,
+    "format": " {}%",
+    "max-length": 10
+  },
+  "temperature": {
+	// "thermal-zone": 2,
+	// "hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+	"critical-threshold": 80,
+	"format": "({temperatureC}°C)"
+  },
+  "memory": {
+	"interval": 3,
+	"format": " {used:0.1f}G/{total:0.1f}G"
   },
   "tray": {
       "icon-size": 21,
