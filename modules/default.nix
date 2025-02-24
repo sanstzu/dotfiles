@@ -10,6 +10,7 @@
     ./hyprlock
     ./waybar
     ./ghostty
+    ./wofi
 
     ./git
     ./zsh

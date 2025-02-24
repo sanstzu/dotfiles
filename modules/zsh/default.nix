@@ -24,6 +24,9 @@ in {
           };
         }
       ];
+      shellAliases = {
+        "nix-rbs" = "sudo nixos-rebuild switch --flake ~/.nix"
+      };
     };
   };
 }
