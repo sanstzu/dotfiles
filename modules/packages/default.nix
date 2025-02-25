@@ -17,8 +17,8 @@ in {
       # Networking stuff
       wireshark busybox
 
-      # Utilities
-      htop
+      # System utilities
+      htop ncdu
     ];
   };
 
