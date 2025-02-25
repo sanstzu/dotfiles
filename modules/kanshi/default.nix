@@ -21,7 +21,6 @@ in {
               # Disable laptop screen
               criteria = "eDP-1";
               status = "disable";
-              scale = "1.6";
             }
           ];
         };
