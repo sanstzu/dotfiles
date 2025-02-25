@@ -16,7 +16,7 @@
    },
   "cpu": {
     "interval": 3,
-    "format": " {usage}%",
+    "format": " {usage}%/{max_frequency}GHz",
     "max-length": 10
   },
   "temperature": {
