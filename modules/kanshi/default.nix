@@ -21,6 +21,7 @@ in {
               # Disable laptop screen
               criteria = "eDP-1";
               status = "disable";
+              scale = "1.6";
             }
           ];
         };
@@ -28,21 +29,6 @@ in {
           outputs = [
             {
               # Enable laptop screen
-              criteria = "eDP-1";
-              status = "enable";
-            }
-          ];
-        };
-
-        docked = {
-          outputs = [
-            {
-              # Enable monitor
-              criteria = "*";
-              status = "enable";
-            }
-            {
-              # Enable laptop screen (just to be safe :))
               criteria = "eDP-1";
               status = "enable";
             }
