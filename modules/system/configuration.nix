@@ -39,6 +39,7 @@
   programs.hyprland.enable = true;
   programs.hyprland.withUWSM  = true;
   programs.wireshark.enable = true;
+  programs.steam.enable = true;
 
   # Enable zsh
   programs.zsh.enable = true;
