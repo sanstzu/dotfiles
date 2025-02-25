@@ -13,15 +13,14 @@ in {
         docked-hall = {
           outputs = [
             {
+              # Enable my personal monitor
+              criteria = "Acer Technologies CBL272U 0x2101C841";
+              status = "enable";
+            }
+            {
               # Disable laptop screen
               criteria = "eDP-1";
               status = "disable";
-            }
-            {
-              # Enable Acer monitor
-              criteria = "desc:Acer Technologies CBL272U 0x2101C841";
-              status = "enable";
-              mode = "2560x1440@75.00";
             }
           ];
         };
@@ -29,6 +28,21 @@ in {
           outputs = [
             {
               # Enable laptop screen
+              criteria = "eDP-1";
+              status = "enable";
+            }
+          ];
+        };
+
+        docked = {
+          outputs = [
+            {
+              # Enable monitor
+              criteria = "*";
+              status = "enable";
+            }
+            {
+              # Enable laptop screen (just to be safe :))
               criteria = "eDP-1";
               status = "enable";
             }
