@@ -27,6 +27,7 @@ in {
       shellAliases = {
         "nix-rbs" = "sudo nixos-rebuild switch --flake ~/.nix";
         "nix-clean" = "sudo nix-collect-garbage --delete-older-than 7d";
+        "spotify" = "ncspot";
       };
     };
   };
