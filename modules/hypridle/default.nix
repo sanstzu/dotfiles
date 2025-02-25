@@ -23,8 +23,8 @@ in {
               on-timeout = "loginctl lock-session";            # lock screen when timeout has passed
           }
         ];
-      }
-    }
+      };
+    };
   };
 }
 
