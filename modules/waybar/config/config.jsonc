@@ -27,8 +27,9 @@
 	"format": "({temperatureC}°C)"
   },
   "memory": {
-	"interval": 3,
-	"format": " {used:0.1f>5}G/{total:0.1f>5}G"
+    "interval": 3,
+    // update with your max RAM
+    "format": " {used:>4.1f}G/{total:>4.1f}G"
   },
   "tray": {
       "icon-size": 21,
@@ -56,6 +57,7 @@
     }
   },
   "clock": {
+      "interval": "clock",
       "timezone": "Asia/Singapore",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
       "format": "󰥔 {:%H:%M:%S  %d/%m/%Y}"

@@ -19,6 +19,9 @@ in {
 
       # System utilities
       htop ncdu
+
+      # ??
+      neofetch
     ];
   };
 

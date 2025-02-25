@@ -19,6 +19,7 @@
             openmoji-color
             nerd-fonts.jetbrains-mono
             font-awesome
+            noto-fonts-cjk-sans
         ];
 
         fontconfig = {
