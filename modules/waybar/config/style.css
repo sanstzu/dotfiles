@@ -2,7 +2,7 @@
 
 * {
   font-family: "JetBrainsMono NF Light";
-  font-size: 17px;
+  font-size: 15px;
   min-height: 0;
 }
 
@@ -70,7 +70,7 @@
   color: @green;
 }
 
-#battery.charging {
+#battery.chargsing {
   color: @green;
 }
 
@@ -86,6 +86,14 @@
   color: @flamingo;
 }
 
+#pulseaudio {
+  color: @peach;
+}
+
+#memory {
+  color: @rosewater;
+}
+
 /* Middle */
 #backlight, #battery, #pulseaudio {
     border-radius: 0;
@@ -98,16 +106,15 @@
   margin-left: 1rem;
 }
 
-#memory {
-  color: @rosewater;
+#battery {
+  
   /* Add this to the last member of the group */
   border-radius: 0px 1rem 1rem 0px;
   margin-right: 1rem;
 }
 
 
-#pulseaudio {
-  color: @peach;
+#network {
   /* Add this to the first member of the group */
   border-radius: 1rem 0px 0px 1rem;
   margin-left: 1rem;

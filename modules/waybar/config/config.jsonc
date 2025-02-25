@@ -3,9 +3,9 @@
   "position": "top", // Waybar position (top|bottom|left|right)
   // "width": 1280, // Waybar width
   // Choose the order of the modules
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["custom/music"],
-  "modules-right": ["cpu", "temperature", "memory", "pulseaudio", "backlight", "backlight#2", "power-profiles-daemon", "battery", "clock", "tray", "custom/lock", "custom/power"],
+  "modules-left": ["hyprland/workspaces", "custom/music"],
+  "modules-center": [],
+  "modules-right": ["cpu", "temperature", "memory", "battery", "network", "pulseaudio", "power-profiles-daemon", "clock", "tray", "custom/lock", "custom/power"],
   "hyprland/workspaces": {
        "disable-scroll": true,
        "sort-by-name": true,
@@ -16,7 +16,7 @@
    },
   "cpu": {
     "interval": 3,
-    "format": " {usage}%/{max_frequency}GHz",
+    "format": " {usage: >3}%/{max_frequency:.2f}GHz",
     "max-length": 18
   },
   "temperature": {
@@ -58,40 +58,30 @@
   "clock": {
       "timezone": "Asia/Singapore",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-      "format-alt": "󰥔 {:%d/%m/%Y}",
-      "format": "󰥔 {:%H:%M}"
+      "format": "󰥔 {:%H:%M  %d/%m/%Y}"
   },
-  "backlight": {
-      "device": "amdgpu_bl1",
-      "format": "{icon} {percent}%",
-      "on-scroll-up":   "brightnessctl -d amdgpu_bl1 s 1%+",
-      "on-scroll-down": "brightnessctl -d amdgpu_bl1 s 1%-",
-      "on-click-right": "brightnessctl -d amdgpu_bl1 s 10%-",
-      "on-click": "brightnessctl -d amdgpu_bl1 s 10%+",
-      "format-icons": ["", "", "", "", "", "", "", "", ""]
-  },
-  "backlight#2": {
-      "device": "asus::kbd_backlight",
-      "format": "󰌌",
-      "on-scroll-up":   "brightnessctl -d asus::kbd_backlight s 1+",
-      "on-scroll-down": "brightnessctl -d asus::kbd_backlight s 1-",
-      "on-click-right": "brightnessctl -d asus::kbd_backlight s 1-",
-      "on-click": "brightnessctl -d asus::kbd_backlight s 1+",
+  "network": {
+    "format": " {bandwidthUpBytes:<9}  {bandwidthDownBytes:<9}",
+    "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{icon} {essid} {signalStrength}%",
+    "max-length": 30,
+    "interval": 3,
   },
   "battery": {
       "states": {
           "warning": 30,
           "critical": 15
       },
-      "format": "{icon} {capacity}%",
-      "format-charging": "󰂄 {capacity}%",
-      "format-plugged": "󰂄 {capacity}%",
+      "format": "{icon} {capacity: >3}%",
+      "format-charging": "󰂄 {capacity: >3}%",
+      "format-plugged": "󰂄 {capacity: >3}%",
       "format-alt": "{icon}",
       "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
   "pulseaudio": {
       // "scroll-step": 1, // %, can be a float
-      "format": "{icon} {volume}%",
+      "format": "{icon} {volume: >3}%",
       "format-muted": "",
       "format-icons": {
           "default": ["", "", " "]

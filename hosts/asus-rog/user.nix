@@ -6,13 +6,17 @@
     # gui
     firefox.enable = true;
     vscode.enable = true;
+    ghostty.enable = true;
+  
+
+    # system
+    kanshi.enable = true;
     hypridle.enable = true;  
     hyprland.enable = true;
-    hyprlock.enable = true; 
+    hyprlock.enable = true;
     waybar.enable = true;
-    wofi.enable = true;
-    ghostty.enable = true;
- 
+    wofi.enable = true; 
+
     # cli
     git.enable = true;
     zsh.enable = true;

@@ -5,12 +5,15 @@
   imports = [
     ./firefox
     ./vscode
-    ./hypridle
-    ./hyprland
-    ./hyprlock
     ./waybar
     ./ghostty
     ./wofi
+
+    # System
+    ./kanshi
+    ./hypridle
+    ./hyprland
+    ./hyprlock
 
     ./git
     ./zsh
