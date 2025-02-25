@@ -28,7 +28,7 @@
   },
   "memory": {
 	"interval": 3,
-	"format": " {used:0.1f}G/{total:0.1f}G"
+	"format": " {used:0.1f>5}G/{total:0.1f>5}G"
   },
   "tray": {
       "icon-size": 21,
@@ -58,7 +58,7 @@
   "clock": {
       "timezone": "Asia/Singapore",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-      "format": "󰥔 {:%H:%M  %d/%m/%Y}"
+      "format": "󰥔 {:%H:%M:%S  %d/%m/%Y}"
   },
   "network": {
     "format": " {bandwidthUpBytes:<9}  {bandwidthDownBytes:<9}",
