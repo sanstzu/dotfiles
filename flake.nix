@@ -8,6 +8,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
 
   };
 
@@ -21,7 +26,7 @@
           modules = [
             { networking.hostName = hostname; }
             ./modules/system/configuration.nix
-            ( import (./. + "/hosts/${hostname}") nixos-hardware )
+            ( import (./. + "/hosts/${hostname}") nixos-hardware lanzaboote )
             home-manager.nixosModules.home-manager
             {
               home-manager = {
