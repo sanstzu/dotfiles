@@ -16,7 +16,7 @@
 
   };
 
-  outputs = { nixpkgs, home-manager, nixos-hardware, ... }@inputs:
+  outputs = { nixpkgs, home-manager, nixos-hardware, lanzaboote, ... }@inputs:
     let 
       system = "x86_64-linux";
 

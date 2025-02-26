@@ -1,4 +1,5 @@
 nixos-hardware:
+lanzaboote:
 { inputs, ... }:
 
 {

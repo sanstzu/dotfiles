@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    sbctl bootctl
+    sbctl systemdUkify
   ];
 
   boot.loader.systemd-boot.enable = lib.mkForce false;
