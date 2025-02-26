@@ -57,7 +57,7 @@
     }
   },
   "clock": {
-      "interval": "clock",
+      "interval": 1,
       "timezone": "Asia/Singapore",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
       "format": "󰥔 {:%H:%M:%S  %d/%m/%Y}"
