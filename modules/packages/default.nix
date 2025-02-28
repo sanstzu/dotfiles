@@ -18,7 +18,7 @@ in {
       wireshark busybox
 
       # System utilities
-      htop ncdu pciutils
+      htop ncdu pciutils busybox
 
       # ??
       neofetch

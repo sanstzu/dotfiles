@@ -20,6 +20,10 @@ in {
         ${builtins.readFile ./hyprland.conf}  
       '';
     };
+
+    home.file.".comfig/uwsm/env-hyprland".text = ''
+      env = AQ_DRM_DEVICES,/dev/dri/card1:/dev/dri/card0;
+    '';
   };
 }
 
