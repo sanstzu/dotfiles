@@ -10,6 +10,7 @@ in {
       # d2d applications
       discord telegram-desktop
       pgadmin4 steam ncspot
+      libreoffice-qt6-fresh
 
       # File managers
       nemo nemo-fileroller unzip zip
@@ -18,7 +19,7 @@ in {
       wireshark busybox
 
       # System utilities
-      htop ncdu pciutils busybox
+      htop ncdu pciutils
 
       # ??
       neofetch
