@@ -8,6 +8,7 @@
     ./waybar
     ./ghostty
     ./wofi
+    ./neovim
 
     # System
     ./kanshi

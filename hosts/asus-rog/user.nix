@@ -20,6 +20,7 @@
     # cli
     git.enable = true;
     zsh.enable = true;
+    neovim.enable = true;
 
     # packages
     packages.enable = true;

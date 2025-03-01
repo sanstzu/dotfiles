@@ -1,13 +1,13 @@
 { pkgs, lib, config, ... }:
 
 with lib;
-let cfg = config.modules.nvim;
+let cfg = config.modules.neovim;
 
 in {
-  options.modules.nvim = { enable = mkEnableOption "nvim"; };
+  options.modules.neovim = { enable = mkEnableOption "neovim"; };
   config = mkIf cfg.enable {
     home.pkgs = with pkgs; [
-      nvim
+      neovim
     ];
 
     
