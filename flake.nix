@@ -16,6 +16,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    stylix.url = "github:danth/stylix";
+
     apple-fonts = {
       url = "github:Lyndeno/apple-fonts.nix/master";
     };
