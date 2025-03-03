@@ -22,7 +22,7 @@ in {
       htop ncdu pciutils
 
       # ??
-      neofetch
+      neofetch solaar
     ];
   };
 

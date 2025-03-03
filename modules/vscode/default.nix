@@ -13,6 +13,7 @@ in {
     programs.vscode = {
       enable = true;
       package = pkgs.vscode.fhs;
+      mutableExtensionsDir = false;
       userSettings = {
        editor.fontFamily = "'JetBrainsMono Nerd Font'";
       };

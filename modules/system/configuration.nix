@@ -11,6 +11,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Time
+  time.hardwareClockInLocalTime = true;
+
   # Install fonts
   fonts = {
         packages = with pkgs; [

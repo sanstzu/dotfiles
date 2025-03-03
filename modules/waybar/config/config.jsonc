@@ -68,7 +68,7 @@
     "format-disconnected": "󰤮",
     "tooltip-format-wifi": "{icon} {essid} {signalStrength}%",
     "max-length": 30,
-    "interval": 3,
+    "interval": 3
   },
   "battery": {
       "states": {

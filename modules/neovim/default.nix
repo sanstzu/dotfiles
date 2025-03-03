@@ -6,7 +6,7 @@ let cfg = config.modules.neovim;
 in {
   options.modules.neovim = { enable = mkEnableOption "neovim"; };
   config = mkIf cfg.enable {
-    home.pkgs = with pkgs; [
+    home.packages = with pkgs; [
       neovim
     ];
 

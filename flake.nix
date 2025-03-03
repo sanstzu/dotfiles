@@ -16,7 +16,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix.url = "github:danth/stylix";
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     apple-fonts = {
       url = "github:Lyndeno/apple-fonts.nix/master";
@@ -34,7 +37,6 @@
           modules = [
             { networking.hostName = hostname; }
             ./modules/system/configuration.nix
-            ( import (./. + "/hosts/${hostname}") )
             home-manager.nixosModules.home-manager
             {
               home-manager = {
@@ -44,6 +46,7 @@
                 users.clayt = (./. + "/hosts/${hostname}/user.nix");
               };
             }
+            ( import (./. + "/hosts/${hostname}") )
           ];
 
           specialArgs = { inherit inputs; };
