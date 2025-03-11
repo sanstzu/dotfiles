@@ -16,7 +16,9 @@ in {
       userEmail = "claytonfernalo@gmail.com";
       extraConfig = {
         init = { defaultBranch = "main"; };
-        credential.credentialStore = "gpg";
+        credential.helper = "manager";
+        credential."https://github.com".username = "sanstzu";
+        credential.credentialStore = "cache";
       };
     };
   };

@@ -5,6 +5,7 @@
   // Choose the order of the modules
   "modules-left": ["hyprland/workspaces", "custom/music"],
   "modules-center": [],
+  "no-center": true,
   "modules-right": ["cpu", "temperature", "memory", "battery", "network", "pulseaudio", "power-profiles-daemon", "clock", "tray", "custom/lock", "custom/power"],
   "hyprland/workspaces": {
        "disable-scroll": true,
@@ -15,19 +16,19 @@
        }
    },
   "cpu": {
-    "interval": 3,
+    "interval": 2,
     "format": " {usage: >3}%/{max_frequency:.2f}GHz",
     "max-length": 18
   },
   "temperature": {
 	// "thermal-zone": 2,
 	// "hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
-	"interval": 3,
+	"interval": 2,
     "critical-threshold": 85,
 	"format": "({temperatureC}°C)"
   },
   "memory": {
-    "interval": 3,
+    "interval": 2,
     // update with your max RAM
     "format": " {used:>4.1f}G/{total:>4.1f}G"
   },
@@ -68,18 +69,19 @@
     "format-disconnected": "󰤮",
     "tooltip-format-wifi": "{icon} {essid} {signalStrength}%",
     "max-length": 30,
-    "interval": 3
+    "interval": 2
   },
   "battery": {
-      "states": {
-          "warning": 30,
-          "critical": 15
-      },
-      "format": "{icon} {capacity: >3}%",
-      "format-charging": "󰂄 {capacity: >3}%",
-      "format-plugged": "󰂄 {capacity: >3}%",
-      "format-alt": "{icon}",
-      "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    "interval": 2,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon} {capacity: >3}% ({power:.2f}W)",
+    "format-charging": "󰂄 {capacity: >3}% ({power:.2f}W)",
+    "format-plugged": "󰂄 {capacity: >3}% ({power:.2f}W)",
+    "format-alt": "{icon}",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
   "pulseaudio": {
       // "scroll-step": 1, // %, can be a float

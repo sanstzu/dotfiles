@@ -10,6 +10,9 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  services.udev.extraRules = ''
+    ACTION=="add", KERNEL=="asus-nb-wmi", RUN+="${pkgs.bash}/bin/bash -c 'echo 80 > /sys/class/power_supply/BAT?/charge_control_end_threshold'
+  '';
 
   # Time
   time.hardwareClockInLocalTime = true;
@@ -101,14 +104,6 @@
       enable = true;
     };
 
-    # Desktop
-    xserver = {
-      enable = true;
-      xkb = {
-        layout = "us";	
-        variant = "";
-      };
-    };
     
     # Login screen
     greetd = {
@@ -124,36 +119,18 @@
     pipewire = {
       enable = true;
       alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
       jack.enable = true;
 
       extraConfig.pipewire = {
         "context.properties" = {
-          default.clock.allowed-rates = [ 44100 48000 96000 ];
+          default.clock.rate = 192000;
+          default.clock.allowed-rates = [ 44100 48000 96000 192000 ];
           default.clock.quantum = 32;
           default.clock.min-quantum = 32;
-          default.clock.max-quantum = 1024;
+          default.clock.max-quantum = 8192;
         };
-      };
 
-      extraConfig.pipewire-pulse."92-low-latency" = {
-        context.modules = [
-          {
-            name = "libpipewire-module-protocol-pulse";
-            args = {
-              pulse.min.req = "32/48000";
-              pulse.default.req = "32/48000";
-              pulse.max.req = "32/48000";
-              pulse.min.quantum = "32/48000";
-              pulse.max.quantum = "32/48000";
-            };
-          }
-        ];
-        stream.properties = {
-          node.latency = "32/48000";
-          resample.quality = 1;
-        };
+        resample.quality = 10;
       };
     };
   };
@@ -171,7 +148,7 @@
   users.users.clayt = {
     isNormalUser = true;
     description = "Clayton Fernalo";
-    extraGroups = [ "networkmanager" "wheel" "wireshark" ];
+    extraGroups = [ "networkmanager" "wheel" "wireshark" "docker" ];
     shell = pkgs.zsh;
   };
 
@@ -191,7 +168,12 @@
     sbctl
     blueman
     greetd.tuigreet
+
+    # hyprland
+    xdg-desktop-portal xdg-desktop-portal-hyprland
   ];
+
+  virtualisation.docker.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

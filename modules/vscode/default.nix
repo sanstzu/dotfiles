@@ -14,8 +14,15 @@ in {
       enable = true;
       package = pkgs.vscode.fhs;
       mutableExtensionsDir = false;
-      userSettings = {
-       editor.fontFamily = "'JetBrainsMono Nerd Font'";
+      profiles = {
+        default = {
+          extensions = with pkgs; [
+            vscode-extensions.ocamllabs.ocaml-platform
+            vscode-extensions.rust-lang.rust-analyzer
+            vscode-extensions.golang.go
+            vscode-extensions.dbaeumer.vscode-eslint
+          ];
+        };
       };
     };
 

@@ -22,13 +22,6 @@ in {
           "eDP-1, 2560x1440@120, 0x0, 1"
         ];
 
-        # Environment variables
-        env = [
-          "XCURSOR_SIZE,24"
-          "HYPRCURSOR_SIZE,24"
-          "WLR_DRM_DEVICES,/dev/dri/card1"
-          "WLR_NO_HARDWARE_CURSORS,0"
-        ];
 
         # General settings
         general = {
@@ -127,6 +120,10 @@ in {
         gestures = {
           workspace_swipe = false;
         };
+        
+        xwayland = {
+          force_zero_scaling = true;
+        };
 
         # Device-specific settings
         device = {
@@ -138,7 +135,7 @@ in {
         "$mainMod" = "SUPER";
         "$terminal" = "ghostty";
         "$fileManager" = "dolph";
-        "$menu" = "wofi --show run --xoffset=2310 --yoffset=12 --width=230px --height=984 --style=$HOME/.config/wofi.css --term=footclient --prompt=Run";
+        "$menu" = "wofi --show drun --width=720px --height=480 --style=$HOME/.config/wofi.css --term=footclient --prompt=Run";
         "$NIXOS_CONFIG_DIR" = "~/.nix";
 
         # Window and workspace rules
@@ -187,17 +184,9 @@ in {
           # Screenshot
           "$mainMod SHIFT, S, exec, hyprshot -m region --freeze --clipboard-only"
           ", PRINT, exec, hyprshot -m output --clipboard-only --silent"
-
-          # Multimedia keys
-          ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
-          ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-          ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-          ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-          ",XF86MonBrightnessUp, exec, brightnessctl s 10%+"
-          ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
-          ",XF86KbdBrightnessUp, exec, brightnessctl -d asus::kbd_backlight s 1+"
-          ",XF86KbdBrightnessDown, exec, brightnessctl -d asus::kbd_backlight s 1-"
         ];
+        
+        cursor.no_hardware_cursors = true;
 
         bindl = [
           ", XF86AudioNext, exec, playerctl next"
@@ -241,7 +230,11 @@ in {
     };
 
     home.file.".config/uwsm/env-hyprland".text = ''
-      env = AQ_DRM_DEVICES,/dev/dri/card1:/dev/dri/card0
+      export AQ_DRM_DEVICES="/dev/dri/card1:/dev/dri/card0"
+      export XCURSOR_SIZE=24
+      export HYPRCURSOR_SIZE=24
+      export LIBVA_DRIVER_NAME=nvidia
+      export __GLX_VENDOR_LIBRARY_NAME=nvidia
     '';
   };
 }

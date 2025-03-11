@@ -11,6 +11,7 @@ in {
       discord telegram-desktop
       pgadmin4 steam ncspot
       libreoffice-qt6-fresh
+      zoom-us obsidian
 
       # File managers
       nemo nemo-fileroller unzip zip
