@@ -1,6 +1,7 @@
 { inputs, ... }:
 
 {
+  services.xserver.videoDrivers = [ "amdgpu" "nvidia" ];
   hardware.nvidia = {
     modesetting.enable = true;
     
@@ -8,10 +9,8 @@
       enable = true;
       finegrained = true;
     };
-    
+
     nvidiaSettings = true;
     forceFullCompositionPipeline = false;
-
-
   };
 }

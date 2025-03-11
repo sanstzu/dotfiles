@@ -94,6 +94,15 @@
 
   # Services
   services = {
+
+    xserver = {
+      enable = true;
+      xkb = {
+        layout = "us";	
+        variant = "";
+      };
+    };
+    
     gvfs.enable  = true;
 
     udisks2.enable = true;
