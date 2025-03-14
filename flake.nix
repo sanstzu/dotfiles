@@ -25,6 +25,11 @@
       url = "github:Lyndeno/apple-fonts.nix/master";
     };
 
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs:

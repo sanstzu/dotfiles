@@ -8,7 +8,7 @@
     ./waybar
     ./ghostty
     ./wofi
-    ./neovim
+    ./nixvim
 
     # System
     ./kanshi

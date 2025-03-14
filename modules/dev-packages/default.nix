@@ -18,6 +18,9 @@ in {
 
       # JS/TS
       pnpm nodejs_23
+
+      # C/C++
+      gnat
     ];
   };
 
