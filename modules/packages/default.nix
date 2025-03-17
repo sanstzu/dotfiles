@@ -8,13 +8,14 @@ in {
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
       # d2d applications
-      discord telegram-desktop
       pgadmin4 steam ncspot
-      libreoffice-qt6-fresh
-      zoom-us obsidian
+      libreoffice-qt6-fresh obsidian
 
+      # Communications
+      zoom-us slack discord telegram-desktop
+      
       # File managers
-      nemo nemo-fileroller unzip zip
+      nemo nemo-fileroller unzip zi
 
       # Networking stuff
       wireshark busybox

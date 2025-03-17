@@ -1,7 +1,11 @@
 { config, lib, inputs, ... }:
 
 {
-  imports = [ ../../modules/default.nix ];
+  imports = [ 
+    ../../modules/default.nix 
+  ];
+
+
   config.modules = {
     # gui
     firefox.enable = true;
@@ -20,7 +24,7 @@
     # cli
     git.enable = true;
     zsh.enable = true;
-    neovim.enable = true;
+    nixvim.enable = true;
 
     # packages
     packages.enable = true;

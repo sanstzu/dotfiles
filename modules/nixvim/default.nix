@@ -5,10 +5,17 @@ let cfg = config.modules.nixvim;
 
 in {
   options.modules.nixvim = { enable = mkEnableOption "nixvim"; };
+  imports = [
+    inputs.nixvim.homeManagerModules.nixvim
+  ];
+
   config = mkIf cfg.enable {
-    imports = [
-      inputs.nixvim.homeManagerModules.nixvim
-    ];
+    programs.nixvim = {
+      enable = true;
+
+      colorschemes.catppuccin.enable = true;
+      plugins.lualine.enable = true;
+    };
   };
 }
 

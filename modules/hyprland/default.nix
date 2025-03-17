@@ -7,7 +7,6 @@ in {
   options.modules.hyprland = { enable = mkEnableOption "hyprland"; };
   
   config = mkIf cfg.enable {
-
     home.packages = with pkgs; [
       gtk3 hyprland swaybg networkmanagerapplet wofi hyprshot
     ];
@@ -222,7 +221,7 @@ in {
 
         # Executions on start
         exec-once = [
-          "swaybg -i $NIXOS_CONFIG_DIR/pics/wallpaper-2.png"
+          "swaybg -i $NIXOS_CONFIG_DIR/pics/wallpaper3.jpg"
           "waybar"
           "systemctl --user enable --now hypridle.service"
         ];
