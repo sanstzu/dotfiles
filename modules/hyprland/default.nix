@@ -217,6 +217,8 @@ in {
           "float, class:.blueman-manager-wrapped"
           "suppressevent maximize, class:.*"
           "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+          "stayfocused, class:^jetbrains-rustrover$, title:^$"
+          "move onscreen cursor, class:^jetbrains-rustrover$, title:^$"
         ];
 
         # Executions on start

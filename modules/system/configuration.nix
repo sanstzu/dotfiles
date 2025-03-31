@@ -94,14 +94,6 @@
 
   # Services
   services = {
-
-    xserver = {
-      enable = true;
-      xkb = {
-        layout = "us";	
-        variant = "";
-      };
-    };
     
     gvfs.enable  = true;
 
@@ -127,7 +119,6 @@
 
     pipewire = {
       enable = true;
-      jack.enable = true;
 
       extraConfig.pipewire = {
         "context.properties" = {

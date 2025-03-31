@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, config, ... }:
 
 {
   services.xserver.videoDrivers = [ "amdgpu" "nvidia" ];
@@ -9,6 +9,8 @@
       enable = true;
       finegrained = true;
     };
+
+    package = config.boot.kernelPackages.nvidiaPackages.production;
 
     nvidiaSettings = true;
     forceFullCompositionPipeline = false;

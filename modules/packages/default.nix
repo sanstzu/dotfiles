@@ -15,7 +15,7 @@ in {
       zoom-us slack discord telegram-desktop
       
       # File managers
-      nemo nemo-fileroller unzip zi
+      nemo nemo-fileroller unzip zip
 
       # Networking stuff
       wireshark busybox
@@ -24,7 +24,7 @@ in {
       htop ncdu pciutils
 
       # ??
-      neofetch solaar
+      neofetch solaar jetbrains.rust-rover
     ];
   };
 

@@ -26,5 +26,10 @@
     };
   };
 
+  stylix.cursor = {
+    name = "Vanila DMZ";
+    package = pkgs.vanilla-dmz;
+    size = 32;
+  };
   stylix.opacity.terminal = 0.7;
 }

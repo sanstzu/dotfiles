@@ -8,7 +8,7 @@ in {
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
       # Rust
-      rustc cargo
+      rustc rustup
 
       # OCaml
       ocaml opam
