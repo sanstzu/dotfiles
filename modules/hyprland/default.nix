@@ -11,6 +11,16 @@ in {
       gtk3 hyprland swaybg networkmanagerapplet wofi hyprshot
     ];
 
+    # home.pointerCursor = {
+    #   enable = true;
+    #   name = "Vanilla-DMZ";
+    #   package = pkgs.vanilla-dmz;
+    #   hyprcursor = {
+    #     enable = true;
+    #     size = 32;
+    #     };
+    # };
+
     # home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
     wayland.windowManager.hyprland = lib.mkForce {
       enable = true;
@@ -19,6 +29,7 @@ in {
         # Monitor configuration
         monitor = [
           "eDP-1, 2560x1440@120, 0x0, 1"
+          "desc:Acer Technologies CBL272U 0x2101C841, 2560x1440@75.00, auto, 1"
         ];
 
 
@@ -232,8 +243,10 @@ in {
 
     home.file.".config/uwsm/env-hyprland".text = ''
       export AQ_DRM_DEVICES="/dev/dri/card1:/dev/dri/card0"
-      export XCURSOR_SIZE=24
+      export HYPRCURSOR_THEME=Vanilla-DMZ
       export HYPRCURSOR_SIZE=24
+      export XCURSOR_THEME=Vanilla-DMZ
+      export XCURSOR_SIZE=24
       export LIBVA_DRIVER_NAME=nvidia
       export __GLX_VENDOR_LIBRARY_NAME=nvidia
     '';

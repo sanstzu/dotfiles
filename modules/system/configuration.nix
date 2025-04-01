@@ -170,9 +170,19 @@
 
     # hyprland
     xdg-desktop-portal xdg-desktop-portal-hyprland
+    vanilla-dmz
   ];
 
-  virtualisation.docker.enable = true;
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = false;
+  };
+
+  nix.gc = {
+    automatic = true;
+    randomizedDelaySec = "14m";
+    options = "--delete-older-than 1s";
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

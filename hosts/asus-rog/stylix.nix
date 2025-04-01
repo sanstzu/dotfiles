@@ -17,19 +17,13 @@
 
     monospace = {
       package = pkgs.nerd-fonts.jetbrains-mono;
-      name = "JetBrains Mono Nerd Font";
+      name = "JetBrainsMono Nerd Font Mono";
     };
 
     emoji = {
       package = pkgs.noto-fonts-emoji;
       name = "Noto Color Emoji";
     };
-  };
-
-  stylix.cursor = {
-    name = "Vanila DMZ";
-    package = pkgs.vanilla-dmz;
-    size = 32;
   };
   stylix.opacity.terminal = 0.7;
 }

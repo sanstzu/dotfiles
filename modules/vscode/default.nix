@@ -13,7 +13,7 @@ in {
     programs.vscode = {
       enable = true;
       package = pkgs.vscode.fhs;
-      mutableExtensionsDir = false;
+      mutableExtensionsDir = true;
       # profiles = {
       #   default = {
       #     extensions = with pkgs; [
